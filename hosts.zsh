@@ -24,7 +24,7 @@ update-hosts () {
 # updates and compiles hosts.d
 update-adblock () {
 	# there is a redirect on https://someonewhocares.org. fuck that shit.
-	curl http://someonewhocares.org/hosts/zero/hosts -o /etc/adblock-list 2> /dev/null
+	curl http://someonewhocares.org/hosts/zero/hosts -o /tmp/adblock-list 2> /dev/null
 	sudo mv /tmp/adblock-list /etc/hosts.d/adblock-list
 	update-hosts
 }
